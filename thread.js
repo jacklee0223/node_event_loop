@@ -1,4 +1,4 @@
-process.env.UV_THREADPOOL_SIZE = 2;
+process.env.UV_THREADPOOL_SIZE = 2; // default thread number is 4. try changing to 2 to see what happens when you run this file in Node. Then try 5
 
 const crypto = require('crypto'); // standard library included in Node
 
