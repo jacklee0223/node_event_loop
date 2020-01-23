@@ -9,7 +9,7 @@ function makeRequest() {
     .request('https://www.google.com', res => {
       res.on('data', () => {});
       res.on('end', () => {
-        console.log(Date.now() - start);
+        console.log(`Request: ${Date.now() - start}`);
       });
     })
     .end();
@@ -17,7 +17,7 @@ function makeRequest() {
 
 function executeHash() {
   crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
-    console.log(`1: ${Date.now() - start}`);
+    console.log(`Hash: ${Date.now() - start}`);
   });
 }
 
